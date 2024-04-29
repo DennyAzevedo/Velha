@@ -4,8 +4,7 @@ def imprimeCampo(campo):
 	print(" %s | %s | %s " % (campo[3], campo[4], campo[5]))
 	print("---|---|---")
 	print(" %s | %s | %s " % (campo[6], campo[7], campo[8]))
-	
-	
+
 
 def ganhou(simbolo, campo):
 	if campo[0] == simbolo and campo[1] == simbolo and campo[2] == simbolo:
@@ -46,7 +45,6 @@ resp = input("Vamos jogar? (S ou N)").upper()
 
 if resp == "S":
 	campo = ['-', '-', '-', '-', '-', '-', '-', '-', '-']
-	
 	jogador = 1
 	sP1 = 'X'
 	sP2 = 'O'
@@ -61,27 +59,20 @@ if resp == "S":
 				vc = int(input())
 				if campo[vc] == '-':
 					break
-		
 			campo[vc] = sP1
-		
 			jogador = 2
-		
 			if ganhou(sP1,campo):
 				imprimeCampo(campo)
 				print("Jogador 1 GANHOU")
 				break
-	
 		else:
 			imprimeCampo(campo)
 			while 1:
 				vc = int(input())
 				if campo[vc] == '-':
 					break
-		
 			campo[vc] = sP2
-		
 			jogador = 1
-		
 			if ganhou(sP2,campo):
 				imprimeCampo(campo)
 				print("Jogador 2 GANHOU")

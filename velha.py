@@ -31,19 +31,19 @@ def ganhou(simbolo, campo):
 		return 1
 
 def velha(campo):
-  if '_' not in campo:
-    return 1
+	if '_' not in campo:
+		return 1
 
 campo = ['_', '_', '_', '_', '_', '_', '_', '_', '_']
 
 jogador = random.choice((0, 1))
 
 if jogador == 1:
-  sVC = 'X'
-  sPC = 'O'
+	sVC = 'X'
+	sPC = 'O'
 else:
-  sPC = 'X'
-  sVC = 'O'
+	sPC = 'X'
+	sVC = 'O'
 
 print("Voce e' %s" % sVC)
 print("O Pc e' %s" % sPC)
